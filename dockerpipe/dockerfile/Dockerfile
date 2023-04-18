@@ -1,5 +1,5 @@
-FROM alpine
-RUN apk add -no-cache curl wget busybox-extras netcat-openbsd python py-pip
-RUN pip install awscli
-RUN apk --purge -v del py-pip
+FROM ubuntu:latest
+RUN apt-get install curl wget python py-pip
+RUN apt-get install awscli
+RUN apt-get --purge -V remove py-pip
 CMD tail -f /dev/null
