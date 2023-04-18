@@ -12,7 +12,7 @@ pipeline {
         stage("Create docker image") {
             steps {
                 echo "--------------------- start building image -----------------------"
-		dir ('dockerpipe') {
+		dir ('dockerpipe/dockerfile') {
 			sh 'docker build -t my-app:1.0 .'
            }
         }
